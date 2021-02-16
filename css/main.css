@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'SF Mono Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/SFMonoSemibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/SFProDisplay-Light.woff') format('woff');
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+html{
+    font-family:'SF Mono Semibold';
+    font-weight:normal;
+
+}
+
+#clock{
+    font-family: 'SF Pro Display';
+    font-size: 50pt;
+    color: rgb(255, 255, 255);
+    text-align: end;
+    opacity: 70%;
+}
+#time,#date{
+    font-weight: normal;
+    font-size: 60px;
+    margin: 0 auto;
+}
+#date{
+    font-size: 26px;
+}
+.term{
+    background: black;
+    opacity: 95%;
+    width:700px;
+    height: 500px;
+    margin: 5% auto 0 auto;
+    padding: 12px 5px 5px 12px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 40px 17px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 40px 17px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 40px 17px rgba(0,0,0,0.8);
+}
+
+.red-button, .yellow-button,.green-button{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #ff5f56;
+    transition: background-color 0.2s ease;
+}
+.red-button:hover{
+    background-color: #dd2319;
+}
+
+.yellow-button {
+    background-color: #ffbd2e;
+    transition: background-color 0.2s ease;
+}
+
+.yellow-button:hover {
+    background-color: #c58700;
+}
+
+.green-button{
+    background-color: #27c93f;
+    transition: background-color 0.2s ease;
+}
+
+.green-button:hover{
+    background-color: #009917;
+}
+
+#main-text{
+    display:flex;
+    font-size: 16px;
+    color: white;
+}
+
+img{
+    height:150px;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.simple-text{
+    display: inline;
+    font-size: 16px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    color: white;
+}
+
+.pic {
+    font-size:80px;
+    text-align: center;
+    margin: 5px 30px 5px 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #0fa7ff;
+
+}
+
+.links{
+    line-height:24px;
+    color: #ff56ff;
+}
+
+a{
+    color:#00a9a9;
+    text-decoration: none;
+    padding: 0px 0px 0px 0;
+    display:inline-block;
+    position:relative;
+    /*border-bottom: 2px solid transparent;
+    transition: all ease 0.5s; */
+}
+
+a:after{
+    position:absolute;
+    bottom:0;
+    height:1px;
+    width:0%;
+    background-color:#00a9a9;
+    display:block;
+    content:'';
+    transition:0.6s;
+}
+
+a:hover:after{
+    left:0;
+    width:100%;
+}
+
+.info{
+    display: flex;
+    font-size: 16px;
+    color: white;
+}
+
+
+ /* blinking cursor */
+ #cursor {
+    margin: 2px 0px 0px 8px;
+    background: white;
+    line-height: 17px;
+    visibility: visible;
+    /*-webkit-animation: blink s infinite;*/
+    width: 8px;
+    height: 16px;
+  }
+  
+  /*@-webkit-keyframes blink {
+    50% {background: white}
+    0% {background: #222}
+    100% {background: #222}
+  } */
