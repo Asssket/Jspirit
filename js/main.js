@@ -75,17 +75,6 @@ function setWallpaper(){
     document.body.style.backgroundRepeat = 'no-repeat'
 }
 
-function blinkingCursor(){
-
-    var c = document.getElementById("cursor")
-
-    if (c.style.display ==   "none") {
-      c.style.display = "block";
-    } else {
-      c.style.display = "none";
-    }
-  }
-
 /*
 0:00 =    1
 1:30 =    2
@@ -110,4 +99,3 @@ setContent();
 showClocknDate();
 setInterval(showClocknDate, 1000);
 setWallpaper();
-setInterval(blinkingCursor, 500);

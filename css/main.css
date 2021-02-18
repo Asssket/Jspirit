@@ -155,13 +155,21 @@ a:hover:after{
     background: white;
     line-height: 17px;
     visibility: visible;
-    /*-webkit-animation: blink s infinite;*/
+    animation: blink 0.8s infinite;
     width: 8px;
     height: 16px;
-  }
+}
+
+@keyframes blink {
+    from {
+      visibility: visible;
+   }
+ 
+   50% {  
+     visibility: hidden;
+   }
+     to {  
+     visibility: hidden;
+   }
+ }
   
-  /*@-webkit-keyframes blink {
-    50% {background: white}
-    0% {background: #222}
-    100% {background: #222}
-  } */
