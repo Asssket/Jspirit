@@ -80,6 +80,7 @@ html{
 }
 
 #main-text{
+    padding: 0 0 0 0;
     display:flex;
     font-size: 16px;
     color: white;
@@ -99,6 +100,14 @@ img{
     color: white;
 }
 
+#line2{
+    display: flex;
+    visibility: hidden;
+}
+
+.line{
+    display: flex;
+}
 .pic {
     font-size:80px;
     text-align: center;
@@ -142,19 +151,30 @@ a:hover:after{
     width:100%;
 }
 
-.info{
+#info{
     display: flex;
     font-size: 16px;
     color: white;
+    visibility: hidden;
 }
 
 
  /* blinking cursor */
  #cursor {
-    margin: 2px 0px 0px 8px;
+    margin: 12px 0px 0px 2px;
     background: white;
     line-height: 17px;
     visibility: visible;
+    animation: blink 0.8s infinite;
+    width: 8px;
+    height: 16px;
+}
+
+#cursor2 {
+    margin: 12px 0px 0px 2px;
+    background: white;
+    line-height: 17px;
+    visibility: hidden;
     animation: blink 0.8s infinite;
     width: 8px;
     height: 16px;

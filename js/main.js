@@ -1,7 +1,22 @@
-function setContent(){
-    var a = document.getElementById('main-text');
-    a.textContent +=' info';
 
+var  cursor = document.getElementById('cursor2');
+cursor2.style.display = 'none';
+async function setContent(){
+    var  l2 = document.getElementById('line2');
+    showClocknDate();
+    setInterval(showClocknDate, 1000);
+    setWallpaper();
+    await sleep(1000);
+    printing();
+    await sleep(2000);
+    showInfo();
+    l2.style.visibility = 'visible';
+    cursor2.style.display = 'block';
+}
+
+function showInfo(){
+    var info = document.getElementById('info');
+    info.style.visibility = 'visible';
 }
 
 function showClocknDate(){
@@ -62,7 +77,7 @@ function setWallpaper(){
     var timeInMin = time.getHours()*60 + time.getMinutes();
     var times = [0, 90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1080, 1170, 1260, 1350, 1440];
     
-    for (let i = 0; i <= 16; i++) {
+    for (let i = 1; i <= 16; i++) {
         if (timeInMin <= times[i]){ 
             wallPath = "url('/img/" + i + ".jpeg')";
 
@@ -74,6 +89,34 @@ function setWallpaper(){
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundRepeat = 'no-repeat'
 }
+
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function printing(){
+var  t = document.getElementById('main-text');
+var  cursor = document.getElementById('cursor');
+
+var n = 'neofetch'
+
+  t.textContent += ' ';
+  cursor.style.animationPlayState = "paused";
+ await sleep(300);
+
+for (i = 0 ; i < n.length; i++){
+   await sleep(150);
+
+      t.textContent += n[i];
+}
+
+//cursor.style.visibility = 'hidden';
+cursor.style.display = 'none';
+
+}
+
 
 /*
 0:00 =    1
@@ -94,8 +137,4 @@ function setWallpaper(){
 22:30 =   16
 */
 
-//setTimeout(100000);
 setContent();
-showClocknDate();
-setInterval(showClocknDate, 1000);
-setWallpaper();
