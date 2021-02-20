@@ -2,6 +2,15 @@
 var  cursor = document.getElementById('cursor2');
 cursor2.style.display = 'none';
 async function setContent(){
+    s = document.querySelectorAll('.links a');
+    console.log(s);
+    for (i = 0; i < s.length; i++) {
+        
+        s[i].style.visibility = 'hidden';
+    
+    }
+
+   // s[1].style.visibility = 'hidden';
     var  l2 = document.getElementById('line2');
     showClocknDate();
     setInterval(showClocknDate, 1000);
@@ -12,6 +21,8 @@ async function setContent(){
     showInfo();
     l2.style.visibility = 'visible';
     cursor2.style.display = 'block';
+    printingLinks();
+   // s.forEach(element => element.style.visibilit = 'hidden');
 }
 
 function showInfo(){
@@ -77,7 +88,7 @@ function setWallpaper(){
     var timeInMin = time.getHours()*60 + time.getMinutes();
     var times = [0, 90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1080, 1170, 1260, 1350, 1440];
     
-    for (let i = 1; i <= 16; i++) {
+    for (i = 1; i <= 16; i++) {
         if (timeInMin <= times[i]){ 
             wallPath = "url('/img/" + i + ".jpeg')";
 
@@ -96,7 +107,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function printing(){
+async function printing(){ //wil be better in future 
 var  t = document.getElementById('main-text');
 var  cursor = document.getElementById('cursor');
 
@@ -112,8 +123,26 @@ for (i = 0 ; i < n.length; i++){
       t.textContent += n[i];
 }
 
-//cursor.style.visibility = 'hidden';
 cursor.style.display = 'none';
+
+}
+
+async function printingLinks(){ //wil be better in future 
+
+    s = document.querySelectorAll('.links a');
+    var words = ['@JSPiRiT1337','Click', 'Tap ', 'Clap '];
+    
+    for (let i = 0; i < s.length; i++) {
+        s[i].style.visibility = 'visible';
+        for (j = 0 ; j < words[i].length; j++){
+            await sleep(150);
+            s[i].textContent += words[i][j];
+         }
+        
+    }
+
+
+     
 
 }
 
