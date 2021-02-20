@@ -90,7 +90,7 @@ function setWallpaper(){
     
     for (i = 1; i <= 16; i++) {
         if (timeInMin <= times[i]){ 
-            wallPath = "url('/img/" + i + ".jpeg')";
+            wallPath = "url('img/" + i + ".jpeg')";
 
             document.body.style.backgroundImage = wallPath;
             break;
