@@ -18,9 +18,11 @@
 html{
     font-family:'SF Mono Semibold';
     font-weight:normal;
-
+    height: 100%;
 }
-
+body{
+    height: 100%;
+}
 #clock{
     font-family: 'SF Pro Display';
     font-size: 50pt;
